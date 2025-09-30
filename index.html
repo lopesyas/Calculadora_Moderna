@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Moderna | Operações Matemáticas Online</title>
+    <meta name="description" content="Calculadora web moderna com operações básicas e avançadas. Soma, subtração, multiplicação, divisão, potência, raiz quadrada, raiz cúbica e porcentagem.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <div class="calculator-card">
+            <header class="calculator-header">
+                <h1>Calculadora Moderna</h1>
+                <p class="subtitle">Operações matemáticas completas</p>
+            </header>
+
+            <div class="display-section">
+                <div class="display" id="display">0</div>
+            </div>
+
+            <div class="inputs-section">
+                <div class="input-group">
+                    <label for="num1">Número 1</label>
+                    <input type="number" id="num1" placeholder="Digite o primeiro número" step="any">
+                </div>
+                <div class="input-group">
+                    <label for="num2">Número 2</label>
+                    <input type="number" id="num2" placeholder="Digite o segundo número" step="any">
+                </div>
+            </div>
+
+            <div class="operations-grid">
+                <!-- Operações básicas -->
+                <button class="calc-button operation" onclick="executarOperacao('somar')">
+                    <span class="icon">+</span>
+                    <span class="label">Somar</span>
+                </button>
+                <button class="calc-button operation" onclick="executarOperacao('subtrair')">
+                    <span class="icon">−</span>
+                    <span class="label">Subtrair</span>
+                </button>
+                <button class="calc-button operation" onclick="executarOperacao('multiplicar')">
+                    <span class="icon">×</span>
+                    <span class="label">Multiplicar</span>
+                </button>
+                <button class="calc-button operation" onclick="executarOperacao('dividir')">
+                    <span class="icon">÷</span>
+                    <span class="label">Dividir</span>
+                </button>
+
+                <!-- Operações avançadas -->
+                <button class="calc-button advanced" onclick="executarOperacao('potencia')">
+                    <span class="icon">x^y</span>
+                    <span class="label">Potência</span>
+                </button>
+                <button class="calc-button advanced" onclick="executarOperacaoUnica('raizQuadrada')">
+                    <span class="icon">√</span>
+                    <span class="label">Raiz Quadrada</span>
+                </button>
+                <button class="calc-button advanced" onclick="executarOperacaoUnica('raizCubica')">
+                    <span class="icon">∛</span>
+                    <span class="label">Raiz Cúbica</span>
+                </button>
+                <button class="calc-button advanced" onclick="executarOperacao('porcentagem')">
+                    <span class="icon">%</span>
+                    <span class="label">Porcentagem</span>
+                </button>
+            </div>
+
+            <button class="calc-button clear" onclick="limpar()">
+                <span class="label">Limpar</span>
+            </button>
+
+            <!-- Área de mensagens -->
+            <div id="message-area" class="message-area"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
